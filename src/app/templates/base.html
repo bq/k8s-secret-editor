@@ -1,0 +1,48 @@
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel='shortcut icon' type='image/x-icon' href='/static/favicon.ico' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+  	<link rel="stylesheet" href="/css/archives.css">
+  	<script src="/js/jquery-1.11.1.min.js"></script>
+      <script src="/js/form-validator.js"></script>
+  	<script src="/js/archives.js"></script>
+    <title>K8S Secrets Editor</title>
+
+  </head>
+  <body id="markup_archives">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <table style="background:#B00060;; width:100%">
+        {% for message in messages %}
+            <tr style="border-bottom: 1px solid rgba(0, 0, 0, 0.31)"><td style="padding: 7px; font-size: 18px; font-weight: 600;text-align: center;color: white;">{{ message }} </td></tr>
+        {% endfor %}
+      </table>
+      {% endif %}
+    {% endwith %}
+    <header>
+      <h1><div class="sficon-logo_bq_handprint">
+			<i class="sficon-logo_bq_handprint_dot1"></i>
+			<i class="sficon-logo_bq_handprint_dot2"></i>
+			<i class="sficon-logo_bq_handprint_dot3"></i>
+			<i class="sficon-logo_bq_handprint_dot4"></i>
+			<i class="sficon-logo_bq_handprint_dot5"></i>
+			<i class="sficon-logo_bq_handprint_text"></i>
+		</div>K8S Secrets Editor</h1>
+    </header>
+
+    {% block content %}{% endblock %}
+  </section>
+
+
+  </body>
+</html>

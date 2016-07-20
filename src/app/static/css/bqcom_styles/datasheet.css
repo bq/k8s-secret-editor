@@ -1,0 +1,3824 @@
+/**
+ * Global values
+ */
+/**
+ * Global values
+ */
+/**
+ * Link colors
+ * Use: @include link-colors($normal, $hover, $active, $visited, $focus);
+ * Example: link-colors(#00c, #0cc, #c0c, #ccc, #cc0); 
+ */
+/**
+ * Hover link
+ * Use: @include hover-link;
+ */
+/**
+ * Selection text
+ * Use: @include selection-text($color, $background-color);
+ * Example: selection-text(#fff, #000);
+ */
+/**
+ * Relative margin
+ * Use: @include margin-relative($line-height, $font-size);
+ * Example: @include margin-relative($line-height, $font-size); 
+ */
+/**
+ * Line height
+ * Use: @include font-size($font-px, $base-line-height);
+ * Example: @include font-size(16, $base-line-height);
+ * Note: Sets the line-height to a multiple of $base-line-height that's not smaller than $font-size
+ */
+/**
+ * Font size: px to em
+ * Use: @include font-size($font-px);
+ * Example: @include font-size(16);
+ */
+/**
+ * Font size: px to em
+ * Use: @include font-size($font-px);
+ * Example: @include font-size(16);
+ */
+/**
+ * Fluidize
+ * Use: fluidize($px-child, $px-parent);
+ * Example: 
+ * .sidebar {
+ *    width: fluidize(350px, 1000px); 
+ *    // return width 35%
+ * }
+ */
+/**
+ * Absolute Horizontal And Vertical aligment
+ * Use: @include absolute-align($aligment); 
+ * Example: @include absolute-align(middle); 
+ * Note: http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/
+ */
+/**
+ * Reset styles
+ * Note: Global reset rules
+ */
+/* line 145, ../../sass/bqcom_styles/global/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* line 164, ../../sass/bqcom_styles/global/_reset.scss */
+html {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 168, ../../sass/bqcom_styles/global/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 172, ../../sass/bqcom_styles/global/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 176, ../../sass/bqcom_styles/global/_reset.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 180, ../../sass/bqcom_styles/global/_reset.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 61, ../../sass/bqcom_styles/global/_reset.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 184, ../../sass/bqcom_styles/global/_reset.scss */
+a img {
+  border: none;
+}
+
+/* line 188, ../../sass/bqcom_styles/global/_reset.scss */
+select, input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* line 192, ../../sass/bqcom_styles/global/_reset.scss */
+button {
+  overflow: visible;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 0;
+}
+/* line 85, ../../sass/bqcom_styles/global/_reset.scss */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 196, ../../sass/bqcom_styles/global/_reset.scss */
+input {
+  margin: 0;
+}
+/* line 94, ../../sass/bqcom_styles/global/_reset.scss */
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+/* line 97, ../../sass/bqcom_styles/global/_reset.scss */
+input[type="radio"], input[type="checkbox"] {
+  padding: 0 !important;
+  border: none;
+  width: auto !important;
+  cursor: pointer;
+}
+/* line 103, ../../sass/bqcom_styles/global/_reset.scss */
+input[type="button"], input[type="submit"], input[type="image"] {
+  cursor: pointer;
+  outline: 0;
+  overflow: visible;
+  -webkit-appearance: button;
+}
+/* line 109, ../../sass/bqcom_styles/global/_reset.scss */
+input[type="disabled"] {
+  cursor: default;
+  outline: 0;
+  overflow: visible;
+  -webkit-appearance: button;
+}
+
+/* line 200, ../../sass/bqcom_styles/global/_reset.scss */
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: 0;
+}
+
+/* line 122, ../../sass/bqcom_styles/global/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 129, ../../sass/bqcom_styles/global/_reset.scss */
+.lt-ie8 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+/* line 132, ../../sass/bqcom_styles/global/_reset.scss */
+.lt-ie8 legend {
+  margin-left: -7px;
+}
+
+/* Bicubic img IE */
+/* line 136, ../../sass/bqcom_styles/global/_reset.scss */
+.lt-ie8 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/**
+ * GRID
+ */
+/**
+ * Hover link
+ * Use: @include hover-link;
+ */
+/**
+ * Hover link
+ * Use: @include white_container;
+ */
+/*
+* Mixin to use in buttons with an arrow apearing from right to left when hovering
+* ---- HTML markup -----
+* 	<span class="button_container">
+*		<button>
+*			<span class="hideable_text marquee">Suscribirme</span>
+*			<span class="icoFont icon-bq_arrow_right"></span>
+*		</button>
+*	</span>
+* ---- SCSS ----
+*	.button_container{ @include button_with_arrow($min-width-sm); }
+*
+*	BREAKPOINT IS OPTIONAL
+*/
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-Black.eot");
+  src: url("../fonts/Lato/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-BlackItalic.eot");
+  src: url("../fonts/Lato/Lato-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-Bold.eot");
+  src: url("../fonts/Lato/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-BoldItalic.eot");
+  src: url("../fonts/Lato/Lato-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-Hairline.eot");
+  src: url("../fonts/Lato/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Hairline.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-HairlineItalic.eot");
+  src: url("../fonts/Lato/Lato-HairlineItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-HairlineItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-Regular.eot");
+  src: url("../fonts/Lato/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-Italic.eot");
+  src: url("../fonts/Lato/Lato-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-Light.eot");
+  src: url("../fonts/Lato/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato/Lato-LightItalic.eot");
+  src: url("../fonts/Lato/Lato-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'bqreaders_icofont';
+  src: url("../fonts/bqreaders_icofont/bqreaders_icofont.eot");
+  src: url("../fonts/bqreaders_icofont/bqreaders_icofont.eot?#iefix") format("embedded-opentype"), url("../fonts/bqreaders_icofont/bqreaders_icofont.woff") format("woff"), url("../fonts/bqreaders_icofont/bqreaders_icofont.ttf") format("truetype"), url("../fonts/bqreaders_icofont/bqreaders_icofont.svg#bqreaders_icofont") format("svg");
+}
+/* line 100, ../../sass/bqcom_styles/components/_fonts.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'bqreaders_icofont';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 115, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-witbox:before {
+  content: "\e674";
+}
+
+/* line 118, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-tablet:before {
+  content: "\e675";
+}
+
+/* line 121, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-support:before {
+  content: "\e676";
+}
+
+/* line 124, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-smatphone:before {
+  content: "\e677";
+}
+
+/* line 127, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-reader:before {
+  content: "\e678";
+}
+
+/* line 130, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-products-register:before {
+  content: "\e679";
+}
+
+/* line 133, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-forum:before {
+  content: "\e67a";
+}
+
+/* line 136, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-accessories:before {
+  content: "\e67b";
+}
+
+/* line 139, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-shopping_bag:before {
+  content: "\e624";
+}
+
+/* line 142, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-robot:before {
+  content: "\e64e";
+}
+
+/* line 145, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-logo_bq:before {
+  content: "\e623";
+}
+
+/* line 148, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-compare_ico:before {
+  content: "\e62c";
+}
+
+/* line 151, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-QSG_ico:before {
+  content: "\e62f";
+}
+
+/* line 154, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-new_quote_ico:before {
+  content: "\e631";
+}
+
+/* line 157, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-firmware-color2:before {
+  content: "\e633";
+}
+
+/* line 160, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-firmware-color1:before {
+  content: "\e634";
+}
+
+/* line 163, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-qsg-color1:before {
+  content: "\e635";
+}
+
+/* line 166, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-qsg-color2:before {
+  content: "\e636";
+}
+
+/* line 169, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-drivers-color2:before {
+  content: "\e637";
+}
+
+/* line 172, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-drivers-color1:before {
+  content: "\e638";
+}
+
+/* line 175, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-manual-color2:before {
+  content: "\e639";
+}
+
+/* line 178, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-manual-color1:before {
+  content: "\e63a";
+}
+
+/* line 181, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-android-pill:before {
+  content: "\e63b";
+}
+
+/* line 184, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-witbox-color2:before {
+  content: "\e63d";
+}
+
+/* line 187, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-shareable:before {
+  content: "\e63e";
+}
+
+/* line 190, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-non_commercial:before {
+  content: "\e63f";
+}
+
+/* line 193, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-attribution:before {
+  content: "\e640";
+}
+
+/* line 196, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-creative_common:before {
+  content: "\e641";
+}
+
+/* line 199, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-open-hardware:before {
+  content: "\e642";
+}
+
+/* line 202, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-3G:before {
+  content: "\e643";
+}
+
+/* line 205, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-actualizaciones_color1:before {
+  content: "\e64f";
+}
+
+/* line 208, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-actualizaciones_color2:before {
+  content: "\e650";
+}
+
+/* line 211, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-objetos3d_color1:before {
+  content: "\e651";
+}
+
+/* line 214, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-objetos3d_color2:before {
+  content: "\e652";
+}
+
+/* line 217, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-videos_color1:before {
+  content: "\e653";
+}
+
+/* line 220, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-videos_color2:before {
+  content: "\e654";
+}
+
+/* line 223, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-documentation_color1:before {
+  content: "\e655";
+}
+
+/* line 226, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-documentation_color2:before {
+  content: "\e656";
+}
+
+/* line 229, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-software_color2:before {
+  content: "\e659";
+}
+
+/* line 232, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-software_color1:before {
+  content: "\e65a";
+}
+
+/* line 235, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-witbox-color1:before {
+  content: "\e63c";
+}
+
+/* line 238, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_user:before {
+  content: "\e65f";
+}
+
+/* line 241, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_open_envelope:before {
+  content: "\e660";
+}
+
+/* line 244, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_shopping_cart:before {
+  content: "\e661";
+}
+
+/* line 247, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_search_zoom:before {
+  content: "\e662";
+}
+
+/* line 250, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_arrow_right:before {
+  content: "\e663";
+}
+
+/* line 253, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_arrow_left:before {
+  content: "\e664";
+}
+
+/* line 256, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_arrow_top:before {
+  content: "\e665";
+}
+
+/* line 259, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_arrow_bottom:before {
+  content: "\e666";
+}
+
+/* line 262, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_arrow_bottom_right:before {
+  content: "\e667";
+}
+
+/* line 265, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_arrow_bottom_left:before {
+  content: "\e668";
+}
+
+/* line 268, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_compare_product_add:before {
+  content: "\e66f";
+}
+
+/* line 271, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_compare_product_checked:before {
+  content: "\e66e";
+}
+
+/* line 274, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_product_register:before {
+  content: "\e66d";
+}
+
+/* line 277, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_arrow_top_left:before {
+  content: "\e669";
+}
+
+/* line 280, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_arrow_top_right:before {
+  content: "\e66a";
+}
+
+/* line 283, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_speech_balloon:before {
+  content: "\e66c";
+}
+
+/* line 286, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_compare_product_empty:before {
+  content: "\e65e";
+}
+
+/* line 289, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_wheel:before {
+  content: "\e66b";
+}
+
+/* line 292, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-menu:before {
+  content: "\e673";
+}
+
+/* line 295, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-android:before {
+  content: "\e649";
+}
+
+/* line 298, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-github:before {
+  content: "\e64a";
+}
+
+/* line 301, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-windows8:before {
+  content: "\e64b";
+}
+
+/* line 304, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-apple:before {
+  content: "\e64c";
+}
+
+/* line 307, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-download:before {
+  content: "\e62d";
+}
+
+/* line 310, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-book:before {
+  content: "\e62e";
+}
+
+/* line 313, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-tux:before {
+  content: "\e64d";
+}
+
+/* line 316, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-download2:before {
+  content: "\e628";
+}
+
+/* line 319, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-copy:before {
+  content: "\e62a";
+}
+
+/* line 322, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-drawer:before {
+  content: "\e630";
+}
+
+/* line 325, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-paste:before {
+  content: "\e632";
+}
+
+/* line 328, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-twitter3:before {
+  content: "\e644";
+}
+
+/* line 331, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-google-plus:before {
+  content: "\e645";
+}
+
+/* line 334, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-facebook4:before {
+  content: "\e646";
+}
+
+/* line 337, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-cart:before {
+  content: "\e614";
+}
+
+/* line 340, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-sad:before {
+  content: "\e647";
+}
+
+/* line 343, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-share:before {
+  content: "\e648";
+}
+
+/* line 346, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-mobile:before {
+  content: "\e65b";
+}
+
+/* line 349, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-mobile2:before {
+  content: "\e65c";
+}
+
+/* line 352, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-tablet2:before {
+  content: "\e65d";
+}
+
+/* line 355, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-pinterest3:before {
+  content: "\e672";
+}
+
+/* line 358, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-pinterest2:before {
+  content: "\e671";
+}
+
+/* line 361, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-right:before {
+  content: "\e600";
+}
+
+/* line 364, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-up:before {
+  content: "\e601";
+}
+
+/* line 367, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-down:before {
+  content: "\e602";
+}
+
+/* line 370, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-left:before {
+  content: "\e603";
+}
+
+/* line 373, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-right2:before {
+  content: "\e604";
+}
+
+/* line 376, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-up2:before {
+  content: "\e605";
+}
+
+/* line 379, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-down2:before {
+  content: "\e606";
+}
+
+/* line 382, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-left2:before {
+  content: "\e607";
+}
+
+/* line 385, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-left3:before {
+  content: "\e608";
+}
+
+/* line 388, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-down3:before {
+  content: "\e609";
+}
+
+/* line 391, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-up3:before {
+  content: "\e60a";
+}
+
+/* line 394, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow-right3:before {
+  content: "\e60b";
+}
+
+/* line 397, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-flickr:before {
+  content: "\e60c";
+}
+
+/* line 400, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-flickr2:before {
+  content: "\e60d";
+}
+
+/* line 403, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-vimeo:before {
+  content: "\e60e";
+}
+
+/* line 406, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-vimeo2:before {
+  content: "\e60f";
+}
+
+/* line 409, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-twitter:before {
+  content: "\e610";
+}
+
+/* line 412, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-twitter2:before {
+  content: "\e611";
+}
+
+/* line 415, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-facebook:before {
+  content: "\e612";
+}
+
+/* line 418, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-facebook2:before {
+  content: "\e613";
+}
+
+/* line 421, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-googleplus:before {
+  content: "\e615";
+}
+
+/* line 424, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-googleplus2:before {
+  content: "\e616";
+}
+
+/* line 427, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-paypal:before {
+  content: "\e617";
+}
+
+/* line 430, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-house:before {
+  content: "\e618";
+}
+
+/* line 433, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bag:before {
+  content: "\e619";
+}
+
+/* line 436, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-phone:before {
+  content: "\e61a";
+}
+
+/* line 439, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-paperclip:before {
+  content: "\e61b";
+}
+
+/* line 442, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-mail:before {
+  content: "\e61c";
+}
+
+/* line 445, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-chat:before {
+  content: "\e61d";
+}
+
+/* line 448, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-star:before {
+  content: "\e61e";
+}
+
+/* line 451, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-printer:before {
+  content: "\e61f";
+}
+
+/* line 454, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-search:before {
+  content: "\e620";
+}
+
+/* line 457, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-checkmark:before {
+  content: "\e621";
+}
+
+/* line 460, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-cross:before {
+  content: "\e622";
+}
+
+/* line 463, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-pictures:before {
+  content: "\e625";
+}
+
+/* line 466, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-newspaper:before {
+  content: "\e626";
+}
+
+/* line 469, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-user:before {
+  content: "\e627";
+}
+
+/* line 472, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-pencil:before {
+  content: "\e629";
+}
+
+/* line 475, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-archive:before {
+  content: "\e62b";
+}
+
+/* line 478, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-cc:before {
+  content: "\e658";
+}
+
+/* line 481, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-paperplane:before {
+  content: "\e657";
+}
+
+/* line 484, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-pinterest:before {
+  content: "\e670";
+}
+
+/* line 487, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_male:before {
+  content: "\e688";
+}
+
+/* line 490, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-bq_female:before {
+  content: "\e689";
+}
+
+/* line 493, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-Aquaris_E45:before {
+  content: "\e67c";
+}
+
+/* line 496, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-Aquaris_E6:before {
+  content: "\e67d";
+}
+
+/* line 499, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-Aquaris_E5:before {
+  content: "\e67e";
+}
+
+/* line 502, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-Aquaris_E4:before {
+  content: "\e67f";
+}
+
+/* line 505, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-wifi:before {
+  content: "\e680";
+}
+
+/* line 508, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-siguiente:before {
+  content: "\e681";
+}
+
+/* line 511, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-plus:before {
+  content: "\e682";
+}
+
+/* line 514, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-play:before {
+  content: "\e683";
+}
+
+/* line 517, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-impresora:before {
+  content: "\e684";
+}
+
+/* line 520, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-hangouts:before {
+  content: "\e685";
+}
+
+/* line 523, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-contactos:before {
+  content: "\e686";
+}
+
+/* line 526, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-brujula:before {
+  content: "\e687";
+}
+
+@font-face {
+  font-family: 'bqadmFont';
+  src: url("../fonts/bqadmFont/bqadmFont.eot?9p53fk");
+  src: url("../fonts/bqadmFont/bqadmFont.eot?#iefix9p53fk") format("embedded-opentype"), url("../fonts/bqadmFont/bqadmFont.woff?9p53fk") format("woff"), url("../fonts/bqadmFont/bqadmFont.ttf?9p53fk") format("truetype"), url("../fonts/bqadmFont/bqadmFont.svg?9p53fk#bqadmFont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 541, ../../sass/bqcom_styles/components/_fonts.scss */
+[class^="icon-"]:after, [class^="icon-"]:before, [class*=" icon-"]:after, [class*=" icon-"]:before {
+  font-family: 'bqadmFont';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 555, ../../sass/bqcom_styles/components/_fonts.scss */
+button[class^="icon-"], button[class*=" icon-"] {
+  padding: 5px 8px;
+}
+
+/* line 559, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-accessory_battery:before {
+  content: "\e600";
+}
+
+/* line 562, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-accessory_charger:before {
+  content: "\e601";
+}
+
+/* line 565, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-accessory_cleaning:before {
+  content: "\e602";
+}
+
+/* line 568, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-accessory_cover:before {
+  content: "\e603";
+}
+
+/* line 571, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-accessory_screen_protector:before {
+  content: "\e604";
+}
+
+/* line 574, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-accessory_sound:before {
+  content: "\e605";
+}
+
+/* line 577, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-accessory_storage:before {
+  content: "\e606";
+}
+
+/* line 580, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-add_element:before {
+  content: "\e607";
+}
+
+/* line 583, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-add_user:before {
+  content: "\e608";
+}
+
+/* line 586, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-angle_down:before {
+  content: "\e609";
+}
+
+/* line 589, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-angle_left:before {
+  content: "\e60a";
+}
+
+/* line 592, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-angle_right:before {
+  content: "\e60b";
+}
+
+/* line 595, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-angle_up:before {
+  content: "\e60c";
+}
+
+/* line 598, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow_down:before {
+  content: "\e60d";
+}
+
+/* line 601, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow_left:before {
+  content: "\e60e";
+}
+
+/* line 605, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow_right:before {
+  content: "\e60f";
+}
+/* line 608, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow_right.ico_right:before {
+  content: normal;
+}
+/* line 611, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow_right.ico_right:after {
+  content: " \e60f";
+}
+
+/* line 615, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-arrow_up:before {
+  content: "\e610";
+}
+
+/* line 618, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-automatic:before {
+  content: "\e611";
+}
+
+/* line 621, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-check_checked:before {
+  content: "\e612";
+}
+
+/* line 624, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-check_unchecked:before {
+  content: "\e613";
+}
+
+/* line 627, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-close_cross:before {
+  content: "\e614";
+}
+
+/* line 630, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-device_3Dprinting:before {
+  content: "\e615";
+}
+
+/* line 633, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-device_default:before {
+  content: "\e616";
+}
+
+/* line 636, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-device_reader:before {
+  content: "\e617";
+}
+
+/* line 639, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-device_smartphone:before {
+  content: "\e618";
+}
+
+/* line 642, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-device_tablet:before {
+  content: "\e619";
+}
+
+/* line 645, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-disquette_save:before {
+  content: "\e61a";
+}
+
+/* line 648, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-draggable:before {
+  content: "\e61b";
+}
+
+/* line 651, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-eye_open:before {
+  content: "\e61c";
+}
+
+/* line 654, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-god_level:before {
+  content: "\e61d";
+}
+
+/* line 657, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-hand_finger:before {
+  content: "\e61e";
+}
+
+/* line 660, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-logo_bq:before {
+  content: "\e61f";
+}
+
+/* line 663, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-logout:before {
+  content: "\e620";
+}
+
+/* line 666, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-manual:before {
+  content: "\e621";
+}
+
+/* line 669, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-menu_catalogue:before {
+  content: "\e622";
+}
+
+/* line 672, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-menu_content_types:before {
+  content: "\e623";
+}
+
+/* line 675, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-menu_dashboard:before {
+  content: "\e624";
+}
+
+/* line 678, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-menu_gestion:before {
+  content: "\e625";
+}
+
+/* line 681, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-menu_navigation:before {
+  content: "\e626";
+}
+
+/* line 684, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-menu_profile:before {
+  content: "\e627";
+}
+
+/* line 687, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-menu_visual_sheet:before {
+  content: "\e628";
+}
+
+/* line 690, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-module_basic_info:before {
+  content: "\e629";
+}
+
+/* line 693, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-module_gallery:before {
+  content: "\e62a";
+}
+
+/* line 696, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-module_html:before {
+  content: "\e62b";
+}
+
+/* line 699, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-module_marketing:before {
+  content: "\e62c";
+}
+
+/* line 702, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-module_specifications:before {
+  content: "\e62d";
+}
+
+/* line 705, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-module_specifications_2:before {
+  content: "\e62e";
+}
+
+/* line 708, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-module_video:before {
+  content: "\e62f";
+}
+
+/* line 711, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-move_element:before {
+  content: "\e630";
+}
+
+/* line 714, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-recycle_bin:before {
+  content: "\e631";
+}
+
+/* line 717, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-search_glass:before {
+  content: "\e632";
+}
+
+/* line 720, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-sign_minus:before {
+  content: "\e633";
+}
+
+/* line 723, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-sign_plus:before {
+  content: "\e634";
+}
+
+/* line 726, ../../sass/bqcom_styles/components/_fonts.scss */
+.icon-write_down:before {
+  content: "\e635";
+}
+
+@media print {
+  /* line 2, ../../sass/bqcom_styles/global/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 10, ../../sass/bqcom_styles/global/_print.scss */
+  a, a:visited {
+    color: #444444 !important;
+    text-decoration: underline;
+  }
+
+  /* line 14, ../../sass/bqcom_styles/global/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 17, ../../sass/bqcom_styles/global/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 20, ../../sass/bqcom_styles/global/_print.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 24, ../../sass/bqcom_styles/global/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 28, ../../sass/bqcom_styles/global/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 32, ../../sass/bqcom_styles/global/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* line 39, ../../sass/bqcom_styles/global/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 43, ../../sass/bqcom_styles/global/_print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+/**
+ * Utils
+ * Note: Helper classes
+ */
+/* line 8, ../../sass/bqcom_styles/global/_utils.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 138, ../../sass/bqcom_styles/global/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  height: 0;
+}
+/* line 146, ../../sass/bqcom_styles/global/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 12, ../../sass/bqcom_styles/global/_utils.scss */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 16, ../../sass/bqcom_styles/global/_utils.scss */
+.pull-right {
+  float: right !important;
+}
+
+/* line 20, ../../sass/bqcom_styles/global/_utils.scss */
+.pull-left {
+  float: left !important;
+}
+
+/* line 26, ../../sass/bqcom_styles/global/_utils.scss */
+.hide {
+  display: none !important;
+}
+
+/* line 30, ../../sass/bqcom_styles/global/_utils.scss */
+.show {
+  display: block !important;
+}
+
+/* line 36, ../../sass/bqcom_styles/global/_utils.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* line 41, ../../sass/bqcom_styles/global/_utils.scss */
+.invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 53, ../../sass/bqcom_styles/global/_utils.scss */
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 61, ../../sass/bqcom_styles/global/_utils.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 65, ../../sass/bqcom_styles/global/_utils.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 69, ../../sass/bqcom_styles/global/_utils.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 73, ../../sass/bqcom_styles/global/_utils.scss */
+.text-small {
+  font-size: 0.8125em;
+}
+
+/* line 77, ../../sass/bqcom_styles/global/_utils.scss */
+.text-medium {
+  font-size: 1.125em;
+}
+
+/* line 81, ../../sass/bqcom_styles/global/_utils.scss */
+.text-large {
+  font-size: 0.8125em;
+}
+
+/**
+ * Responsive utilities 
+ */
+/* 
+ * Breakpoints
+ * Use: @include breakpoint(point);
+ * Example: 
+ * .layout {
+ *      width: 75%;
+ *      @include breakpoint(xs) { width: 60%; }
+ *      @include breakpoint(sm) { width: 80%; }
+ *      @include breakpoint(md) { width: 95%; }
+ *      @include breakpoint(lg) { width: 95%; }
+ *  }
+ */
+/**
+ * Responsive: Utility classes
+ */
+@-ms-viewport {
+  width: device-width;
+}
+/* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+.visible-xs,
+tr.visible-xs,
+th.visible-xs,
+td.visible-xs {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-xs {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-xs {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-xs,
+  td.visible-xs {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-xs.visible-sm {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-xs.visible-sm {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-xs.visible-sm,
+  td.visible-xs.visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-xs.visible-md {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-xs.visible-md {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-xs.visible-md,
+  td.visible-xs.visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 100em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-xs.visible-lg {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-xs.visible-lg {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-xs.visible-lg,
+  td.visible-xs.visible-lg {
+    display: table-cell !important;
+  }
+}
+/* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+.visible-sm,
+tr.visible-sm,
+th.visible-sm,
+td.visible-sm {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-sm.visible-xs {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-sm.visible-xs {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-sm.visible-xs,
+  td.visible-sm.visible-xs {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-sm {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-sm {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-sm,
+  td.visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-sm.visible-md {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-sm.visible-md {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-sm.visible-md,
+  td.visible-sm.visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 100em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-sm.visible-lg {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-sm.visible-lg {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-sm.visible-lg,
+  td.visible-sm.visible-lg {
+    display: table-cell !important;
+  }
+}
+/* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+.visible-md,
+tr.visible-md,
+th.visible-md,
+td.visible-md {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-md.visible-xs {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-md.visible-xs {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-md.visible-xs,
+  td.visible-md.visible-xs {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-md.visible-sm {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-md.visible-sm {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-md.visible-sm,
+  td.visible-md.visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-md {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-md {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-md,
+  td.visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 100em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-md.visible-lg {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-md.visible-lg {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-md.visible-lg,
+  td.visible-md.visible-lg {
+    display: table-cell !important;
+  }
+}
+/* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+.visible-lg,
+tr.visible-lg,
+th.visible-lg,
+td.visible-lg {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-lg.visible-xs {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-lg.visible-xs {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-lg.visible-xs,
+  td.visible-lg.visible-xs {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-lg.visible-sm {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-lg.visible-sm {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-lg.visible-sm,
+  td.visible-lg.visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-lg.visible-md {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-lg.visible-md {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-lg.visible-md,
+  td.visible-lg.visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 100em) {
+  /* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+  .visible-lg {
+    visibility: visible  !important;
+  }
+
+  /* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+  tr.visible-lg {
+    display: table-row !important;
+  }
+
+  /* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+  th.visible-lg,
+  td.visible-lg {
+    display: table-cell !important;
+  }
+}
+/* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+.hidden-xs {
+  visibility: visible  !important;
+}
+
+/* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+tr.hidden-xs {
+  display: table-row !important;
+}
+
+/* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+th.hidden-xs,
+td.hidden-xs {
+  display: table-cell !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-xs,
+  tr.hidden-xs,
+  th.hidden-xs,
+  td.hidden-xs {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-xs.hidden-sm,
+  tr.hidden-xs.hidden-sm,
+  th.hidden-xs.hidden-sm,
+  td.hidden-xs.hidden-sm {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-xs.hidden-md,
+  tr.hidden-xs.hidden-md,
+  th.hidden-xs.hidden-md,
+  td.hidden-xs.hidden-md {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 100em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-xs.hidden-lg,
+  tr.hidden-xs.hidden-lg,
+  th.hidden-xs.hidden-lg,
+  td.hidden-xs.hidden-lg {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+/* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+.hidden-sm {
+  visibility: visible  !important;
+}
+
+/* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+tr.hidden-sm {
+  display: table-row !important;
+}
+
+/* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+th.hidden-sm,
+td.hidden-sm {
+  display: table-cell !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-sm.hidden-xs,
+  tr.hidden-sm.hidden-xs,
+  th.hidden-sm.hidden-xs,
+  td.hidden-sm.hidden-xs {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-sm,
+  tr.hidden-sm,
+  th.hidden-sm,
+  td.hidden-sm {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-sm.hidden-md,
+  tr.hidden-sm.hidden-md,
+  th.hidden-sm.hidden-md,
+  td.hidden-sm.hidden-md {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 100em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-sm.hidden-lg,
+  tr.hidden-sm.hidden-lg,
+  th.hidden-sm.hidden-lg,
+  td.hidden-sm.hidden-lg {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+/* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+.hidden-md {
+  visibility: visible  !important;
+}
+
+/* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+tr.hidden-md {
+  display: table-row !important;
+}
+
+/* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+th.hidden-md,
+td.hidden-md {
+  display: table-cell !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-md.hidden-xs,
+  tr.hidden-md.hidden-xs,
+  th.hidden-md.hidden-xs,
+  td.hidden-md.hidden-xs {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-md.hidden-sm,
+  tr.hidden-md.hidden-sm,
+  th.hidden-md.hidden-sm,
+  td.hidden-md.hidden-sm {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-md,
+  tr.hidden-md,
+  th.hidden-md,
+  td.hidden-md {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 100em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-md.hidden-lg,
+  tr.hidden-md.hidden-lg,
+  th.hidden-md.hidden-lg,
+  td.hidden-md.hidden-lg {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+/* line 6, ../../sass/bqcom_styles/global/_responsive.scss */
+.hidden-lg {
+  visibility: visible  !important;
+}
+
+/* line 9, ../../sass/bqcom_styles/global/_responsive.scss */
+tr.hidden-lg {
+  display: table-row !important;
+}
+
+/* line 12, ../../sass/bqcom_styles/global/_responsive.scss */
+th.hidden-lg,
+td.hidden-lg {
+  display: table-cell !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-lg.hidden-xs,
+  tr.hidden-lg.hidden-xs,
+  th.hidden-lg.hidden-xs,
+  td.hidden-lg.hidden-xs {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-lg.hidden-sm,
+  tr.hidden-lg.hidden-sm,
+  th.hidden-lg.hidden-sm,
+  td.hidden-lg.hidden-sm {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-lg.hidden-md,
+  tr.hidden-lg.hidden-md,
+  th.hidden-lg.hidden-md,
+  td.hidden-lg.hidden-md {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+@media (min-width: 100em) {
+  /* line 20, ../../sass/bqcom_styles/global/_responsive.scss */
+  .hidden-lg,
+  tr.hidden-lg,
+  th.hidden-lg,
+  td.hidden-lg {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+/* line 2, ../../sass/bqcom_styles/_utils.scss */
+.header-page .nav_title {
+  display: block;
+  opacity: 0;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 15, ../../sass/bqcom_styles/_utils.scss */
+.clearfix:after, .clearfix:before, .container:after, .input_group.bq_checkbox:after, .option_slider_container:after, .header-page .cont:after, #main_footer .footer_container:after, .footer_element:after, #footer_social:after, #subscription:after, #site_info ul:after, .language_container:after, .sheet_section:after, .container:before, .input_group.bq_checkbox:before, .option_slider_container:before, .header-page .cont:before, #main_footer .footer_container:before, .footer_element:before, #footer_social:before, #subscription:before, #site_info ul:before, .language_container:before, .sheet_section:before {
+  clear: both;
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  content: "";
+}
+
+/* line 24, ../../sass/bqcom_styles/_utils.scss */
+.center {
+  text-align: center;
+}
+
+/* line 27, ../../sass/bqcom_styles/_utils.scss */
+.centered_cont {
+  position: relative;
+  text-align: center;
+}
+
+/* line 31, ../../sass/bqcom_styles/_utils.scss */
+.center_element {
+  margin: 0 auto;
+}
+
+/* line 34, ../../sass/bqcom_styles/_utils.scss */
+.inline_center {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 39, ../../sass/bqcom_styles/_utils.scss */
+.float_left_element {
+  float: left;
+}
+
+/* line 42, ../../sass/bqcom_styles/_utils.scss */
+.float_right_element {
+  float: right;
+}
+
+/* Buttons
+-----------------------------------*/
+/* line 48, ../../sass/bqcom_styles/_utils.scss */
+.btn_links {
+  padding: 0.95em 2em;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* line 55, ../../sass/bqcom_styles/_utils.scss */
+.white_btn {
+  background-color: white;
+  border-right: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  border-radius: 5px;
+}
+
+/* line 58, ../../sass/bqcom_styles/_utils.scss */
+.grey_btn {
+  background-color: #f8f8f8;
+  border-right: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  border-radius: 5px;
+}
+/* line 60, ../../sass/bqcom_styles/_utils.scss */
+.grey_btn:hover {
+  background-color: #dfdfdf;
+  border-right: 1px solid #a6a6a6;
+  border-bottom: 1px solid #a6a6a6;
+  border-radius: 5px;
+}
+
+/* Selects, drop up/drop down
+--------------------------------------*/
+/* line 66, ../../sass/bqcom_styles/_utils.scss */
+.drop {
+  padding: 0.2em 0.2em 0.2em 0.4em;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+/* line 70, ../../sass/bqcom_styles/_utils.scss */
+.drop span {
+  vertical-align: middle;
+}
+
+/*List
+-----------------------*/
+/* line 75, ../../sass/bqcom_styles/_utils.scss */
+.two_colum_list li {
+  margin-top: 1.5em;
+}
+
+/**
+ * Scaffolding
+ * Note: Project settings
+ */
+/**
+ * BEM Syntax
+ * .person{}
+ * .person__hand{}
+ * .person--female{}
+ * .person--female__hand{}
+ * .person__hand--left{}
+ */
+/* line 16, ../../sass/bqcom_styles/_scaffolding.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 51, ../../sass/bqcom_styles/global/_mixins.scss */
+::selection {
+  text-shadow: none;
+  color: white;
+  background: #333333;
+}
+
+/* line 56, ../../sass/bqcom_styles/global/_mixins.scss */
+::-moz-selection {
+  text-shadow: none;
+  color: white;
+  background: #333333;
+}
+
+/* line 26, ../../sass/bqcom_styles/_scaffolding.scss */
+html {
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+}
+
+/* line 31, ../../sass/bqcom_styles/_scaffolding.scss */
+body {
+  font-family: "Roboto", "Arial", Helvetica, Sans-serif;
+  font-size: 1em;
+  line-height: 1.125;
+  color: #333333;
+  background-color: #f8f8f8;
+  height: 100%;
+}
+
+/* line 41, ../../sass/bqcom_styles/_scaffolding.scss */
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 46, ../../sass/bqcom_styles/_scaffolding.scss */
+a {
+  color: #333333;
+  text-decoration: none;
+  outline: none;
+  text-decoration: none;
+}
+/* line 112, ../../sass/bqcom_styles/_mixins.scss */
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* line 52, ../../sass/bqcom_styles/_scaffolding.scss */
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 75.0625em) {
+  /* line 52, ../../sass/bqcom_styles/_scaffolding.scss */
+  .container {
+    width: 1200px;
+  }
+}
+@media (min-width: 100.0625em) {
+  /* line 52, ../../sass/bqcom_styles/_scaffolding.scss */
+  .container {
+    width: 1460px;
+  }
+}
+
+/* line 64, ../../sass/bqcom_styles/_scaffolding.scss */
+.containerparallax {
+  width: 100%;
+  height: auto;
+}
+
+/* line 71, ../../sass/bqcom_styles/_scaffolding.scss */
+.main {
+  position: relative;
+}
+/* line 74, ../../sass/bqcom_styles/_scaffolding.scss */
+.main > .container {
+  padding: 3em 1.5em 1.5em;
+}
+/* line 77, ../../sass/bqcom_styles/_scaffolding.scss */
+.main .container {
+  z-index: 5;
+}
+/* line 80, ../../sass/bqcom_styles/_scaffolding.scss */
+.main .container > h1 {
+  margin-bottom: 0.5em;
+  color: #333333;
+  font-size: 2.9em;
+  font-weight: bold;
+}
+
+/* line 1, ../../sass/bqcom_styles/_common.scss */
+p {
+  margin-bottom: 0.5em;
+}
+
+/* line 6, ../../sass/bqcom_styles/_common.scss */
+.info_trigger {
+  color: white;
+  background-color: #00addd;
+  border-radius: 100%;
+  border-bottom: 2px solid #cccccc;
+  border-right: 2px solid #cccccc;
+  display: inline-block;
+  padding: 0.3em;
+  width: 1.6em;
+  line-height: 0.8em;
+  font-size: 1.2em;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+}
+/* line 20, ../../sass/bqcom_styles/_common.scss */
+.info_trigger:hover {
+  background-color: #0099c4;
+}
+
+/* line 25, ../../sass/bqcom_styles/_common.scss */
+.info_popup {
+  display: none;
+  background-color: white;
+  border: 1px solid #cccccc;
+  padding: 0.8em;
+  border-radius: 3px;
+  position: relative;
+}
+/* line 32, ../../sass/bqcom_styles/_common.scss */
+.info_popup .close_popup {
+  position: absolute;
+  right: 0.2em;
+  top: 0.2em;
+  color: #9a9a9a;
+}
+
+/* line 42, ../../sass/bqcom_styles/_common.scss */
+.input_group label, .inline_input_group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* line 48, ../../sass/bqcom_styles/_common.scss */
+.input_group {
+  margin-bottom: 2em;
+  position: relative;
+  width: 100%;
+  /* Firefox 18- */
+  /* Firefox 19+ */
+}
+/* line 55, ../../sass/bqcom_styles/_common.scss */
+.input_group input[type='text'],
+.input_group input[type='email'],
+.input_group input[type='password'],
+.input_group input[type='number'],
+.input_group select, .input_group.bq_checkbox .checkbox_box {
+  margin: 0;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #9a9a9a;
+  padding: 0.6em 0.7em 0.6em;
+}
+/* line 67, ../../sass/bqcom_styles/_common.scss */
+.input_group select {
+  padding: 0.75em 0.7em 0.6em;
+}
+/* line 70, ../../sass/bqcom_styles/_common.scss */
+.input_group.bq_checkbox {
+  margin: 1em 0 2em;
+}
+/* line 73, ../../sass/bqcom_styles/_common.scss */
+.input_group.bq_checkbox .checkbox_box {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: text-bottom;
+  margin-right: 0.7em;
+  float: left;
+  position: relative;
+}
+/* line 81, ../../sass/bqcom_styles/_common.scss */
+.input_group.bq_checkbox .checkbox_box .check_sign {
+  font-size: 1.45em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #0a9c50;
+  display: none;
+}
+/* line 90, ../../sass/bqcom_styles/_common.scss */
+.input_group.bq_checkbox .checkbox_box.checked .check_sign {
+  display: block;
+}
+/* line 95, ../../sass/bqcom_styles/_common.scss */
+.input_group.bq_checkbox .checkbox_label {
+  display: inline-block;
+  float: left;
+  width: 85%;
+}
+/* line 102, ../../sass/bqcom_styles/_common.scss */
+.input_group.erasable .erase_input {
+  display: none;
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  line-height: 2.9em;
+}
+/* line 108, ../../sass/bqcom_styles/_common.scss */
+.input_group.erasable .erase_input .icoFont {
+  vertical-align: middle;
+  padding: 0.25em 0.3em;
+}
+/* line 111, ../../sass/bqcom_styles/_common.scss */
+.input_group.erasable .erase_input .icoFont:hover {
+  background: #ce0b22;
+  border-radius: 100%;
+  color: white;
+}
+/* line 120, ../../sass/bqcom_styles/_common.scss */
+.input_group.wrong input {
+  border-color: #ce0b22;
+}
+/* line 123, ../../sass/bqcom_styles/_common.scss */
+.input_group.wrong .erase_input {
+  color: #ce0b22;
+}
+/* line 128, ../../sass/bqcom_styles/_common.scss */
+.input_group.valid input {
+  border-color: #0dcc69;
+}
+/* line 131, ../../sass/bqcom_styles/_common.scss */
+.input_group.valid .valid_input {
+  color: #0dcc69;
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  line-height: 2.9em;
+  vertical-align: middle;
+}
+/* line 140, ../../sass/bqcom_styles/_common.scss */
+.input_group input::-webkit-input-placeholder {
+  text-align: center;
+}
+/* line 143, ../../sass/bqcom_styles/_common.scss */
+.input_group input:-moz-placeholder {
+  text-align: center;
+}
+/* line 147, ../../sass/bqcom_styles/_common.scss */
+.input_group input::-moz-placeholder {
+  text-align: center;
+}
+/* line 151, ../../sass/bqcom_styles/_common.scss */
+.input_group input:-ms-input-placeholder {
+  text-align: center;
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 48, ../../sass/bqcom_styles/_common.scss */
+  .input_group {
+    width: 95%;
+    margin: 0 auto 2em;
+  }
+  /* line 157, ../../sass/bqcom_styles/_common.scss */
+  .input_group.bq_checkbox {
+    margin: 1em auto 2em;
+    width: 95%;
+  }
+}
+@media (min-width: 56.3125em) {
+  /* line 48, ../../sass/bqcom_styles/_common.scss */
+  .input_group {
+    /*width: 50%;
+    margin: 0 auto 2em;*/
+  }
+}
+
+@media (min-width: 37.5625em) {
+  /* line 168, ../../sass/bqcom_styles/_common.scss */
+  .inline_input_group {
+    width: 95%;
+    margin: 0 auto 2em;
+    font-size: 0.9em;
+  }
+}
+
+/* line 179, ../../sass/bqcom_styles/_common.scss */
+.form_btn {
+  padding: 0.95em 2em;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #bfbfbf;
+  border-radius: 5px;
+  border-right: 1px solid #bfbfbf;
+  box-sizing: border-box;
+}
+
+/* line 191, ../../sass/bqcom_styles/_common.scss */
+.help_ico_form {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 1.2em;
+  background-color: #cbeef5;
+  border: 1px solid #a5bfc4;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 208, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container {
+  text-align: center;
+}
+/* line 211, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container .option_slider {
+  width: 50%;
+  height: 2.5em;
+  background: #999;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  vertical-align: sub;
+  margin: 0 1em;
+}
+/* line 224, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container .option_slider .slider {
+  position: absolute;
+  left: 3%;
+  top: 0.27em;
+  height: 1.75em;
+  width: 1.75em;
+  background: #fafafa;
+  border-radius: 3px;
+  border-right: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+}
+/* line 235, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container .option_slider .option_name {
+  position: absolute;
+  line-height: 2.5em;
+  color: white;
+  right: 10%;
+}
+/* line 241, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container .option_slider .first_option_name {
+  display: block;
+}
+/* line 244, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container .option_slider .second_option_name {
+  display: none;
+}
+/* line 248, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container .option_slider:hover .slider {
+  background: #ededed;
+}
+/* line 253, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container .option_selector_link {
+  font-size: 3em;
+}
+/* line 255, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container .option_selector_link:last-of-type {
+  opacity: .3;
+}
+/* line 260, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container.second_option .slider {
+  right: 3%;
+  left: auto;
+}
+/* line 264, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container.second_option .option_name {
+  left: 10%;
+  right: auto;
+}
+/* line 268, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container.second_option .first_option_name {
+  display: none;
+}
+/* line 271, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container.second_option .second_option_name {
+  display: block;
+}
+/* line 274, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container.second_option .option_selector_link {
+  opacity: .3;
+}
+/* line 276, ../../sass/bqcom_styles/_common.scss */
+.option_slider_container.second_option .option_selector_link:last-of-type {
+  opacity: 1;
+}
+
+/* line 1, ../../sass/bqcom_styles/components/_header.scss */
+.header-page {
+  position: relative;
+  width: 100%;
+  color: #333333;
+  border-bottom: 1px solid #bfbfbf;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 10;
+}
+/* line 9, ../../sass/bqcom_styles/components/_header.scss */
+.header-page h1.logo {
+  position: relative;
+  float: left;
+  font-size: 0.8rem;
+  padding: 1rem 2rem 0 1rem;
+}
+/* line 15, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .ico_logo {
+  color: #1A1A1A;
+  font-size: 2.1rem;
+}
+/* line 19, ../../sass/bqcom_styles/components/_header.scss */
+.header-page a {
+  display: block;
+  font-weight: bold;
+}
+/* line 23, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav {
+  display: none;
+  position: absolute;
+  top: 3.95em;
+  width: 100%;
+  background-color: #FFF;
+  border-bottom: 1px solid #bfbfbf;
+  z-index: 10;
+}
+@media (min-width: 56.3125em) {
+  /* line 23, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav {
+    display: block;
+    position: inherit;
+    top: auto;
+    display: inline-block;
+    float: left;
+    width: 64%;
+    border: none;
+    background-color: transparent;
+  }
+  /* line 41, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li > a {
+    padding: 1.4em 0.4em;
+  }
+  /* line 44, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li {
+    display: inline-block;
+  }
+}
+@media (min-width: 75.0625em) {
+  /* line 49, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul > li {
+    padding-right: 0.8em;
+  }
+}
+/* line 54, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav a {
+  padding: 0.725em 1em;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 56.3125em) {
+  /* line 54, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav a {
+    text-align: left;
+  }
+  /* line 62, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav a span {
+    text-transform: none;
+  }
+}
+/* line 67, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav a span.icon-arrow-down2 {
+  /*float: right;*/
+  display: inline-block;
+}
+/* line 72, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu {
+  display: none;
+}
+@media (min-width: 56.3125em) {
+  /* line 72, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu {
+    position: absolute;
+    left: 0;
+    top: 3.95em;
+    width: 100%;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #bfbfbf;
+  }
+}
+/* line 82, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu.products li a {
+  text-align: center;
+}
+@media (min-width: 56.3125em) {
+  /* line 85, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu ul {
+    padding: 1em 1em;
+  }
+}
+@media (min-width: 56.3125em) {
+  /* line 92, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_products:nth-of-type(4) {
+    border-right: 1px solid #000;
+  }
+  /* line 95, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_3:nth-of-type(3) {
+    border-right: 1px solid #000;
+  }
+  /* line 98, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_5:nth-of-type(3) {
+    border-right: 1px solid #000;
+  }
+}
+@media (min-width: 75.0625em) {
+  /* line 103, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_products:nth-of-type(4) {
+    border-right: none;
+  }
+  /* line 106, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_products:nth-of-type(5) {
+    padding: 0;
+    border-right: 1px solid #000;
+  }
+  /* line 109, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_products:nth-of-type(5) a {
+    font-size: 0.925em;
+  }
+  /* line 111, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_products:nth-of-type(5) a p {
+    text-align: center;
+  }
+  /* line 116, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_3:nth-of-type(3) {
+    border-right: 1px solid #000;
+  }
+  /* line 119, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_5:nth-of-type(3) {
+    border-right: none;
+  }
+  /* line 122, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_5:nth-of-type(4) {
+    padding: 0;
+    border-right: 1px solid #000;
+  }
+  /* line 125, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu .with-secondary-links .col_5:nth-of-type(4) a {
+    font-size: 0.925em;
+  }
+}
+/* line 132, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu li {
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 56.3125em) {
+  /* line 132, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li {
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    -moz-transition: background-position 500ms linear;
+    -webkit-transition: background-position 500ms linear;
+    -o-transition: background-position 500ms linear;
+    transition: background-position 500ms linear;
+    background-position: left center;
+  }
+}
+/* line 155, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu li.col_products {
+  /*@extend %col_lg_1_7;*/
+}
+@media (min-width: 56.3125em) {
+  /* line 162, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li.col.secondary_link a span.icoFont, .header-page nav ul li .submenu li.col.secondary_link a .description {
+    display: none;
+  }
+}
+@media (min-width: 75.0625em) {
+  /* line 162, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li.col.secondary_link a span.icoFont, .header-page nav ul li .submenu li.col.secondary_link a .description {
+    display: block;
+  }
+}
+/* line 171, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu li span.icoFont {
+  display: none;
+}
+@media (min-width: 56.3125em) {
+  /* line 171, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li span.icoFont {
+    display: block;
+    margin: 0 auto 15px;
+    font-size: 5em;
+  }
+}
+/* line 179, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu li.col_products span.icoFont {
+  margin: 0 auto 15px;
+}
+@media (min-width: 56.3125em) {
+  /* line 179, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li.col_products span.icoFont {
+    font-size: 9.5em;
+  }
+}
+@media (min-width: 75.0625em) {
+  /* line 179, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li.col_products span.icoFont {
+    font-size: 11.5em;
+  }
+}
+/* line 189, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu li a {
+  font-size: 0.825em;
+  font-weight: lighter;
+}
+@media (min-width: 56.3125em) {
+  /* line 189, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li a {
+    font-size: 0.925em;
+    font-weight: lighter;
+    padding: 1em 1em 1em 1em;
+  }
+}
+/* line 198, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu li a:hover {
+  background-color: #F8F8F7;
+}
+@media (min-width: 56.3125em) {
+  /* line 198, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li a:hover {
+    background-color: white;
+    border-right: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    border-radius: 5px;
+    /*background-image: url("http://www-cdn.bq.com/img/web/corporate-info/goto.png");*/
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+}
+@media (min-width: 56.3125em) {
+  /* line 207, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li a p {
+    margin-top: 0.7em;
+  }
+}
+/* line 211, ../../sass/bqcom_styles/components/_header.scss */
+.header-page nav ul li .submenu li a p.description {
+  display: none;
+}
+@media (min-width: 56.3125em) {
+  /* line 211, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li a p.description {
+    display: block;
+    margin-top: 1.5em;
+    text-transform: none;
+  }
+}
+@media (min-width: 56.3125em) {
+  /* line 221, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li.secondary_link {
+    display: block;
+    padding: 0.5em;
+  }
+  /* line 225, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li.secondary_link a {
+    font-size: 0.8em;
+  }
+  /* line 228, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li .submenu li.secondary_link p {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+@media (min-width: 56.3125em) {
+  /* line 237, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page nav ul li:hover .submenu {
+    display: inline-block;
+  }
+}
+/* line 243, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions {
+  position: relative;
+  float: right;
+}
+/* line 246, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions li {
+  display: inline-block;
+  padding: 0.8em 0;
+  float: left;
+}
+@media (min-width: 56.3125em) {
+  /* line 251, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page .other_actions .menu_link {
+    display: none;
+  }
+}
+/* line 255, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions .menu_link a {
+  text-transform: uppercase;
+}
+/* line 257, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions .menu_link a span {
+  vertical-align: middle;
+}
+/* line 259, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions .menu_link a span.icon-menu2 {
+  font-weight: normal;
+}
+/* line 262, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions .menu_link a span.menu-text {
+  display: none;
+}
+@media (min-width: 37.5625em) {
+  /* line 262, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page .other_actions .menu_link a span.menu-text {
+    display: inline-block;
+    margin-left: 0.5em;
+    font-size: 1em;
+  }
+}
+/* line 273, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions li a {
+  padding: 0.3em 1.5em;
+  font-size: 0.850em;
+  border-left: 1px solid #bfbfbf;
+}
+/* line 277, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions li a.auth-link {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
+/* line 281, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .other_actions li a span {
+  font-size: 2em;
+}
+/* line 290, ../../sass/bqcom_styles/components/_header.scss */
+.header-page #search-cont {
+  display: none;
+}
+/* line 293, ../../sass/bqcom_styles/components/_header.scss */
+.header-page .cont {
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 75.0625em) {
+  /* line 293, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page .cont {
+    width: 1200px;
+  }
+}
+@media (min-width: 100.0625em) {
+  /* line 293, ../../sass/bqcom_styles/components/_header.scss */
+  .header-page .cont {
+    width: 1460px;
+  }
+}
+
+/* line 1, ../../sass/bqcom_styles/components/_footer.scss */
+#main_footer {
+  background: white;
+  padding: 1em;
+}
+/* line 4, ../../sass/bqcom_styles/components/_footer.scss */
+#main_footer .footer_container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+/* line 10, ../../sass/bqcom_styles/components/_footer.scss */
+#main_footer .nav_group {
+  padding: 0.6em 1em;
+  text-align: center;
+}
+@media (max-width: 56.25em) {
+  /* line 21, ../../sass/bqcom_styles/components/_footer.scss */
+  #main_footer .nav_group:first-child {
+    padding-top: 0;
+  }
+  /* line 24, ../../sass/bqcom_styles/components/_footer.scss */
+  #main_footer .nav_group:last-child .nav_group_title {
+    border-bottom: none;
+  }
+}
+/* line 29, ../../sass/bqcom_styles/components/_footer.scss */
+#main_footer .nav_group ul {
+  padding-top: 0.5em;
+  display: none;
+}
+@media (min-width: 56.3125em) {
+  /* line 29, ../../sass/bqcom_styles/components/_footer.scss */
+  #main_footer .nav_group ul {
+    display: block;
+  }
+}
+/* line 36, ../../sass/bqcom_styles/components/_footer.scss */
+#main_footer .nav_group .nav_group_title {
+  font-size: 0.9em;
+  font-weight: bold;
+  display: block;
+  padding: 0.9em 0.5em 0.4em;
+  border-bottom: 1px solid #777;
+}
+/* line 42, ../../sass/bqcom_styles/components/_footer.scss */
+#main_footer .nav_group .nav_group_title:hover {
+  background: #dfdfdf;
+}
+/* line 46, ../../sass/bqcom_styles/components/_footer.scss */
+#main_footer .nav_group .nav_element {
+  font-size: 0.9em;
+}
+/* line 48, ../../sass/bqcom_styles/components/_footer.scss */
+#main_footer .nav_group .nav_element a {
+  display: block;
+  padding: 0.8em 0.5em;
+}
+@media (min-width: 56.3125em) {
+  /* line 10, ../../sass/bqcom_styles/components/_footer.scss */
+  #main_footer .nav_group {
+    text-align: left;
+  }
+  /* line 57, ../../sass/bqcom_styles/components/_footer.scss */
+  #main_footer .nav_group .nav_group_title .icoFont {
+    display: none;
+  }
+}
+@media (min-width: 100.0625em) {
+  /* line 64, ../../sass/bqcom_styles/components/_footer.scss */
+  #main_footer .nav_group.double_size .nav_element {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* line 73, ../../sass/bqcom_styles/components/_footer.scss */
+.footer_element {
+  width: 100%;
+  max-width: 1500px;
+  padding: 1em;
+}
+/* line 78, ../../sass/bqcom_styles/components/_footer.scss */
+.footer_element:not(:nth-of-type(n+3)) {
+  border-bottom: 1px solid #777;
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 78, ../../sass/bqcom_styles/components/_footer.scss */
+  .footer_element:not(:nth-of-type(n+3)) {
+    float: none !important;
+    margin: 0 auto;
+  }
+}
+
+/* line 103, ../../sass/bqcom_styles/components/_footer.scss */
+#footer_social .social_link {
+  display: block;
+  padding: 0.5em;
+  line-height: 1em;
+  background: #333333;
+  height: 2em;
+  width: 2em;
+  color: white;
+  border-radius: 2em;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 1px 0 #9a9a9a;
+  -moz-box-shadow: 1px 1px 0 #9a9a9a;
+  box-shadow: 1px 1px 0 #9a9a9a;
+}
+/* line 117, ../../sass/bqcom_styles/components/_footer.scss */
+#footer_social .social_link:hover {
+  -webkit-box-shadow: 1px 2px 0 #9a9a9a;
+  -moz-box-shadow: 1px 2px 0 #9a9a9a;
+  box-shadow: 1px 2px 0 #9a9a9a;
+}
+@media (min-width: 56.3125em) {
+  /* line 103, ../../sass/bqcom_styles/components/_footer.scss */
+  #footer_social .social_link {
+    height: 2.5em;
+    width: 2.5em;
+    padding: 0.8em;
+    font-size: 1.2em;
+  }
+}
+
+/* line 131, ../../sass/bqcom_styles/components/_footer.scss */
+.inline_input_with_button {
+  border: 1px solid #9a9a9a;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 0 #9a9a9a;
+  -moz-box-shadow: 2px 2px 0 #9a9a9a;
+  box-shadow: 2px 2px 0 #9a9a9a;
+  padding: 0.2em;
+  display: table;
+  width: 100%;
+}
+/* line 140, ../../sass/bqcom_styles/components/_footer.scss */
+.inline_input_with_button input {
+  display: table-cell;
+  border: none;
+  vertical-align: top;
+  line-height: 1.8em;
+  padding: 0.2em 0.5em;
+  width: 100%;
+}
+/* line 148, ../../sass/bqcom_styles/components/_footer.scss */
+.inline_input_with_button .button_container {
+  display: table-cell;
+  width: 1%;
+}
+/* line 152, ../../sass/bqcom_styles/components/_footer.scss */
+.inline_input_with_button button {
+  border-left: 1px solid #9a9a9a;
+  vertical-align: top;
+}
+/* line 155, ../../sass/bqcom_styles/components/_footer.scss */
+.inline_input_with_button button .icoFont {
+  width: 2em;
+  height: 1.4em;
+  font-size: 1.4em;
+  display: block;
+  padding: 0.2em;
+}
+
+@media (min-width: 56.3125em) {
+  /* line 169, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription {
+    float: right !important;
+  }
+}
+/* line 178, ../../sass/bqcom_styles/components/_footer.scss */
+#subscription label {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.3em 0 0.7em;
+  font-weight: bold;
+}
+/* line 184, ../../sass/bqcom_styles/components/_footer.scss */
+#subscription label .icoFont {
+  font-size: 3em;
+}
+/* line 188, ../../sass/bqcom_styles/components/_footer.scss */
+#subscription .hideable_text {
+  display: none;
+}
+/* line 145, ../../sass/bqcom_styles/_mixins.scss */
+#subscription .button_container .marquee {
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+@media (min-width: 56.3125em) {
+  /* line 191, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription .button_container {
+    max-width: 140px;
+    overflow: hidden;
+  }
+  /* line 156, ../../sass/bqcom_styles/_mixins.scss */
+  #subscription .button_container button {
+    width: 300px;
+  }
+  /* line 159, ../../sass/bqcom_styles/_mixins.scss */
+  #subscription .button_container span {
+    float: left;
+  }
+  /* line 162, ../../sass/bqcom_styles/_mixins.scss */
+  #subscription .button_container .marquee {
+    padding: 0.4em 1.9em;
+  }
+  /* line 166, ../../sass/bqcom_styles/_mixins.scss */
+  #subscription .button_container:hover .marquee {
+    margin-left: -1em;
+    padding-right: 0;
+  }
+}
+@media (min-width: 56.3125em) {
+  /* line 195, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription label {
+    width: 20%;
+    float: left;
+    padding: 0;
+  }
+  /* line 199, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription label .label_text1 {
+    display: none;
+  }
+  /* line 202, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription label .icoFont {
+    display: block;
+  }
+  /* line 206, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription .inline_input_with_button {
+    width: 80%;
+    float: right;
+  }
+  /* line 209, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription .inline_input_with_button .hideable_text {
+    display: block;
+  }
+}
+@media (min-width: 100.0625em) {
+  /* line 215, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription label {
+    width: 30%;
+  }
+  /* line 218, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription .inline_input_with_button {
+    width: 70%;
+  }
+  /* line 221, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription .icoFont {
+    float: left;
+  }
+  /* line 224, ../../sass/bqcom_styles/components/_footer.scss */
+  #subscription .label_text2 {
+    display: block;
+    float: left;
+    line-height: 3em;
+    padding-left: 1em;
+  }
+}
+
+/* line 234, ../../sass/bqcom_styles/components/_footer.scss */
+#site_info {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+/* line 238, ../../sass/bqcom_styles/components/_footer.scss */
+#site_info ul {
+  display: inline-block;
+}
+/* line 242, ../../sass/bqcom_styles/components/_footer.scss */
+#site_info li {
+  border-right: 1px solid #9a9a9a;
+  float: left;
+}
+/* line 245, ../../sass/bqcom_styles/components/_footer.scss */
+#site_info li:last-child {
+  border-right: none;
+}
+/* line 249, ../../sass/bqcom_styles/components/_footer.scss */
+#site_info .site_info_link {
+  font-size: 0.7em;
+  display: block;
+  padding: 0.3em 1em;
+}
+@media (min-width: 37.5625em) {
+  /* line 234, ../../sass/bqcom_styles/components/_footer.scss */
+  #site_info {
+    max-width: 600px;
+  }
+  /* line 256, ../../sass/bqcom_styles/components/_footer.scss */
+  #site_info ul:nth-child(1) li:last-child {
+    border-right: 1px solid #9a9a9a;
+  }
+}
+@media (min-width: 56.3125em) {
+  /* line 234, ../../sass/bqcom_styles/components/_footer.scss */
+  #site_info {
+    float: left;
+    max-width: 100%;
+  }
+  /* line 265, ../../sass/bqcom_styles/components/_footer.scss */
+  #site_info ul:nth-child(2) li:last-child {
+    border-right: 1px solid #9a9a9a;
+  }
+}
+@media (min-width: 100.0625em) {
+  /* line 234, ../../sass/bqcom_styles/components/_footer.scss */
+  #site_info {
+    float: right;
+    width: 45%;
+    padding-top: 2.5em;
+  }
+}
+
+/* line 278, ../../sass/bqcom_styles/components/_footer.scss */
+.copyright {
+  font-size: 0.7em;
+}
+
+/* line 281, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container {
+  border: 1px solid #9a9a9a;
+  border-radius: 3px;
+  margin-top: 1em;
+  padding: 0.5em;
+  width: 70%;
+  max-width: 240px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 0.8em;
+  background: white;
+  cursor: pointer;
+  height: 2.5em;
+  overflow: hidden;
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  -ms-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  transition: height 0.2s;
+}
+/* line 304, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container:hover {
+  height: 16.5em;
+}
+/* line 307, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .drop_up {
+  position: absolute;
+  font-size: 1.2em;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+/* line 313, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container #actual_country {
+  /* background: red; */
+  display: block;
+  width: 90%;
+  padding: 0.6em 0.5em;
+  line-height: 1em;
+  float: left;
+  position: absolute;
+  bottom: 0.1em;
+  border-top: 1px solid #9a9a9a;
+}
+/* line 324, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_link {
+  background: white;
+  padding: 0.5em;
+  line-height: 1em;
+  display: block;
+  margin: 0.3em 0;
+}
+/* line 330, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_link:hover {
+  background: #e6e6e6;
+}
+/* line 334, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .flag {
+  float: left;
+  margin-top: 0.2em;
+  display: block;
+  width: 16px;
+  height: 11px;
+  background: url(https://static-bqreaders.s3.amazonaws.com/img/web/flags_v2.jpg);
+}
+/* line 342, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_spain {
+  background-position: 0 0;
+}
+/* line 343, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_uk {
+  background-position: 0 -14px;
+}
+/* line 344, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_france {
+  background-position: 0 -28px;
+}
+/* line 345, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_portugal {
+  background-position: 0 -42px;
+}
+/* line 346, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_italia {
+  background-position: 0 -56px;
+}
+/* line 347, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_deutschland {
+  background-position: 0 -70px;
+}
+/* line 349, ../../sass/bqcom_styles/components/_footer.scss */
+.language_container .country_list {
+  position: absolute;
+  bottom: 2.5em;
+  left: 0.5em;
+  width: 90%;
+}
+
+/* line 356, ../../sass/bqcom_styles/components/_footer.scss */
+#copyright_and_language {
+  clear: both;
+  padding-top: 0;
+  padding-bottom: 3em;
+  text-align: center;
+  position: relative;
+}
+@media (min-width: 100.0625em) {
+  /* line 356, ../../sass/bqcom_styles/components/_footer.scss */
+  #copyright_and_language {
+    float: left;
+    width: 35%;
+    padding-top: 2.5em;
+    padding-bottom: 2em;
+  }
+  /* line 367, ../../sass/bqcom_styles/components/_footer.scss */
+  #copyright_and_language .copyright {
+    position: initial;
+    float: left;
+  }
+  /* line 371, ../../sass/bqcom_styles/components/_footer.scss */
+  #copyright_and_language .language_container {
+    margin: 0;
+    bottom: 1.8em;
+    right: 0;
+    left: initial;
+  }
+}
+
+/* line 1, ../../sass/bqcom_styles/components/_breadcrumbs.scss */
+.breadcrumb {
+  position: relative;
+  float: right;
+}
+/* line 5, ../../sass/bqcom_styles/components/_breadcrumbs.scss */
+.breadcrumb ol {
+  display: inline-block;
+}
+/* line 7, ../../sass/bqcom_styles/components/_breadcrumbs.scss */
+.breadcrumb ol li {
+  display: inline-block;
+  padding: 0 0.5em 0 0.2em;
+}
+/* line 10, ../../sass/bqcom_styles/components/_breadcrumbs.scss */
+.breadcrumb ol li a.section_path_link {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 16, ../../sass/bqcom_styles/components/_breadcrumbs.scss */
+.breadcrumb ol.set-section {
+  display: none;
+}
+/* line 18, ../../sass/bqcom_styles/components/_breadcrumbs.scss */
+.breadcrumb ol.set-section li {
+  display: block;
+}
+
+/* line 12, ../../sass/bqcom_styles/_mixins.scss */
+#footer_social .social_link_container {
+  /* xxs */
+  float: left;
+  width: 25%;
+}
+
+/* line 12, ../../sass/bqcom_styles/_mixins.scss */
+#main_footer .nav_group {
+  /* xxs */
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 18.75em) {
+  /* line 19, ../../sass/bqcom_styles/_mixins.scss */
+  .gallery-grid li {
+    /* from xxs */
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 37.5em) {
+  /* line 37, ../../sass/bqcom_styles/_mixins.scss */
+  .gallery-grid li {
+    /* from xs */
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 37.5em) {
+  /* line 37, ../../sass/bqcom_styles/_mixins.scss */
+  .two_colum_list li {
+    /* from xs */
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 48, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_5 {
+    /* sm */
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 48, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_3 {
+    /* sm */
+    float: left;
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 56.25em) {
+  /* line 55, ../../sass/bqcom_styles/_mixins.scss */
+  .gallery-grid li {
+    /* from sm */
+    float: left;
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 48, ../../sass/bqcom_styles/_mixins.scss */
+  #footer_social, #subscription {
+    /* sm */
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 56.25em) {
+  /* line 55, ../../sass/bqcom_styles/_mixins.scss */
+  .two_colum_list li {
+    /* from sm */
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 75.0625em) and (max-width: 100em) {
+  /* line 66, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_products {
+    /* md */
+    float: left;
+    width: 16.66667%;
+  }
+}
+
+@media (min-width: 75em) {
+  /* line 73, ../../sass/bqcom_styles/_mixins.scss */
+  .gallery-grid li {
+    /* from md */
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (min-width: 75.0625em) and (max-width: 100em) {
+  /* line 66, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_3 {
+    /* md */
+    float: left;
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 75.0625em) and (max-width: 100em) {
+  /* line 66, ../../sass/bqcom_styles/_mixins.scss */
+  #footer_social, #subscription {
+    /* md */
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 100.0625em) {
+  /* line 84, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_products {
+    /* lg */
+    float: left;
+    width: 16.66667%;
+  }
+}
+
+@media (min-width: 100.0625em) {
+  /* line 84, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_3 {
+    /* lg */
+    float: left;
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 100.0625em) {
+  /* line 84, ../../sass/bqcom_styles/_mixins.scss */
+  #footer_social, #subscription {
+    /* lg */
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 56.3125em) and (max-width: 75em) {
+  /* line 48, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_products, #main_footer .nav_group, #footer_social .social_link_container {
+    /* sm */
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: 75.0625em) and (max-width: 100em) {
+  /* line 66, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_5, #main_footer .nav_group {
+    /* md */
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: 100.0625em) {
+  /* line 84, ../../sass/bqcom_styles/_mixins.scss */
+  .header-page nav ul li .submenu li.col_5 {
+    /* lg */
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  /* line 30, ../../sass/bqcom_styles/_mixins.scss */
+  .footer_element:not(:nth-of-type(n+3)) {
+    /* xs */
+    float: left;
+    width: 42.85714%;
+  }
+}
+
+@media (min-width: 75.0625em) and (max-width: 100em) {
+  /* line 66, ../../sass/bqcom_styles/_mixins.scss */
+  #footer_social .social_link_container {
+    /* md */
+    float: left;
+    width: 14.28571%;
+  }
+}
+
+@media (min-width: 100.0625em) {
+  /* line 84, ../../sass/bqcom_styles/_mixins.scss */
+  #main_footer .nav_group, #footer_social .social_link_container {
+    /* lg */
+    float: left;
+    width: 14.28571%;
+  }
+}
+
+@media (min-width: 100.0625em) {
+  /* line 84, ../../sass/bqcom_styles/_mixins.scss */
+  #main_footer .nav_group.double_size {
+    /* lg */
+    float: left;
+    width: 28.57143%;
+  }
+}
+
+/* basic info */
+/* line 3, ../../sass/bqcom_styles/_sheet.scss */
+#basicInfoModule.pruebas .title > h2 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+/* line 7, ../../sass/bqcom_styles/_sheet.scss */
+#basicInfoModule.pruebas .price {
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 0.5em 0;
+}
+/* line 12, ../../sass/bqcom_styles/_sheet.scss */
+#basicInfoModule.pruebas .buy a {
+  margin: 2em 0 0;
+}
+
+/* line 17, ../../sass/bqcom_styles/_sheet.scss */
+#basicInfoModule .vertical {
+  margin: 3em 0 0;
+}
+/* line 19, ../../sass/bqcom_styles/_sheet.scss */
+#basicInfoModule .vertical img {
+  width: 210px;
+}
+
+/* line 23, ../../sass/bqcom_styles/_sheet.scss */
+#basicInfoModule .horizontal {
+  margin: 3em 0 0;
+}
+/* line 25, ../../sass/bqcom_styles/_sheet.scss */
+#basicInfoModule .horizontal img {
+  height: 200px;
+  width: 400px;
+  display: block;
+  margin: 1em auto;
+}
+
+/* END basic info */
+/* line 35, ../../sass/bqcom_styles/_sheet.scss */
+.sheet_section h1 {
+  margin: 2em 0 1em 0;
+  font-size: 2em;
+}
+
+/* line 41, ../../sass/bqcom_styles/_sheet.scss */
+.gallery-grid li {
+  text-align: center;
+}
+/* line 47, ../../sass/bqcom_styles/_sheet.scss */
+.gallery-grid li a {
+  display: block;
+  margin: 0 1.5em 1.5em 0;
+  background-color: #FFF;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+}
+/* line 53, ../../sass/bqcom_styles/_sheet.scss */
+.gallery-grid li a img {
+  margin: 0 auto;
+}
+
+/* techSpecs */
+/* line 60, ../../sass/bqcom_styles/_sheet.scss */
+.tres.specs-contenedor {
+  width: 33%;
+  float: left;
+}
+
+/* line 64, ../../sass/bqcom_styles/_sheet.scss */
+.tres + .tres .labels,
+.tres + .tres + .tres .labels {
+  display: none;
+}
+
+/* line 68, ../../sass/bqcom_styles/_sheet.scss */
+.dos.specs-contenedor {
+  width: 50%;
+  float: left;
+}
+
+/* line 72, ../../sass/bqcom_styles/_sheet.scss */
+.dos + .dos .labels {
+  display: none;
+}
+
+/* line 75, ../../sass/bqcom_styles/_sheet.scss */
+.uno.specs-contenedor {
+  width: 100%;
+}
+
+/* line 79, ../../sass/bqcom_styles/_sheet.scss */
+.specs-contenedor .specs-head {
+  width: 100%;
+}
+/* line 81, ../../sass/bqcom_styles/_sheet.scss */
+.specs-contenedor .specs-head a {
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+}
+/* line 86, ../../sass/bqcom_styles/_sheet.scss */
+.specs-contenedor .specs-head h2 {
+  text-align: center;
+  padding: 0.5em 0 2em;
+}
+/* line 91, ../../sass/bqcom_styles/_sheet.scss */
+.specs-contenedor .specs-body {
+  width: 100%;
+}
+/* line 93, ../../sass/bqcom_styles/_sheet.scss */
+.specs-contenedor .specs-body table {
+  width: 100%;
+}
+
+/* line 100, ../../sass/bqcom_styles/_sheet.scss */
+.specs-body td.labels {
+  width: 20%;
+  padding: 1em 0;
+}
+/* line 104, ../../sass/bqcom_styles/_sheet.scss */
+.specs-body td.title {
+  font-weight: bold;
+}
+/* line 107, ../../sass/bqcom_styles/_sheet.scss */
+.specs-body td.specs {
+  width: 80%;
+  padding: 1em 0;
+}
+/* line 111, ../../sass/bqcom_styles/_sheet.scss */
+.specs-body .specs-block {
+  border-top: 1px solid #DDDDDD;
+}
+/* line 115, ../../sass/bqcom_styles/_sheet.scss */
+.specs-body .colors img {
+  margin: 0 auto;
+  display: block;
+  width: 145px;
+}
+
+/* END techSpecs*/
+/* line 124, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider {
+  width: 100%;
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+}
+/* line 130, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .visible-area {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 135, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .visible-area .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 139, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .visible-area .slider img {
+  /* float: left;*/
+  max-width: 100%;
+}
+/* line 143, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .visible-area .slider a {
+  display: block;
+  float: left;
+  height: 300px;
+}
+/* line 150, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .slider-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+/* line 159, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .slider-control.previous {
+  left: 0.5em;
+}
+/* line 162, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .slider-control.next {
+  right: 0.5em;
+}
+/* line 166, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .thumbnails {
+  display: inline;
+  margin: 0 auto;
+}
+/* line 169, ../../sass/bqcom_styles/_sheet.scss */
+.gallery_slider .thumbnails li {
+  display: inline-block;
+}

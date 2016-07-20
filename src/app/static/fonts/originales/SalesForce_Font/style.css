@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'SalesForce_Font';
+	src:url('fonts/SalesForce_Font.eot?-ugv1o8');
+	src:url('fonts/SalesForce_Font.eot?#iefix-ugv1o8') format('embedded-opentype'),
+		url('fonts/SalesForce_Font.ttf?-ugv1o8') format('truetype'),
+		url('fonts/SalesForce_Font.woff?-ugv1o8') format('woff'),
+		url('fonts/SalesForce_Font.svg?-ugv1o8#SalesForce_Font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="sficon-"], [class*=" sficon-"] {
+	font-family: 'SalesForce_Font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sficon-logo_bq_handprint_dot5:before {
+	content: "\e604";
+}
+.sficon-logo_bq_handprint_dot4:before {
+	content: "\e605";
+}
+.sficon-logo_bq_handprint_dot3:before {
+	content: "\e606";
+}
+.sficon-logo_bq_handprint_dot2:before {
+	content: "\e607";
+}
+.sficon-logo_bq_handprint_dot1:before {
+	content: "\e608";
+}
+.sficon-logo_bq_handprint_text:before {
+	content: "\e609";
+}
+.sficon-radio_dot:before {
+	content: "\e60a";
+}
+.sficon-cross:before {
+	content: "\e661";
+}
+.sficon-thin-check:before {
+	content: "\e68b";
+}
+.sficon-arrow-right:before {
+	content: "\e600";
+}
+.sficon-arrow-up:before {
+	content: "\e601";
+}
+.sficon-arrow-down:before {
+	content: "\e602";
+}
+.sficon-arrow-left:before {
+	content: "\e603";
+}

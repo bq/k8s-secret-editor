@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="main_container">
+  <div style="min-width:500px; position:relative; display:flex;">
+  <aside class="main_aside" style="float:left;width:250px">
+    <h1 style="font-size: 28px;margin-top: -20;margin-bottom: 19;"> Namespace </h1>
+    <nav class="main_nav">
+      <ul>
+        {% for n in namespaces %}
+          <a href="/{{n}}" class="menu_link"> {{ n }}</a> <br><br>
+        {% endfor %}
+
+      </ul>
+    </nav>
+  </aside>
+  <aside class="main_aside" style="float:left;width:250px;background-color: rgb(248, 248, 248);">
+    <h1 style="font-size: 28px;margin-top: -20;margin-bottom: 19;"> Secret </h1>
+    <nav class="main_nav">
+
+    </nav>
+  </aside>
+</div>
+
+    <section class="main_section">
+      <h1> {{ titulo }}</h1>
+    </section>
+</div>
+{% endblock %}
