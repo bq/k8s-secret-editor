@@ -1,0 +1,25 @@
+kind: "Deployment"
+apiVersion: "extensions/v1beta1"
+metadata:
+  name: "secret-editor"
+  labels:
+    state: "serving"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "secret-editor"
+        name: "secret-editor"
+    spec:
+      containers:
+        - image: bqitdevops/k8s-secret-editor
+          imagePullPolicy: Always
+          name: secret-editor
+          ports:
+            - containerPort: 80
+              name: http
+          # Set HTTP admin password. Default admin
+          env:
+            - name: ADMIN_PASSWORD
+              value: 'admin'

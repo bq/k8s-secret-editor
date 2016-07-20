@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: "secret-editor"
+  name: "secret-editor"
+spec:
+  ports:
+    - port: 80
+      name: http
+  selector:
+    name: "secret-editor"
