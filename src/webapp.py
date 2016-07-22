@@ -5,10 +5,6 @@ from app import app
 import sys
 from config import *
 import os
-from git import Repo
-from subprocess import call
-import time
-import shutil
 
 reload(sys)
 sys.setdefaultencoding('utf8')
