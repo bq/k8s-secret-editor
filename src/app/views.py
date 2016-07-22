@@ -11,7 +11,6 @@ import yaml
 import pprint
 import base64
 import os
-from git import Repo
 from config import *
 
 def check_auth(username, password):
@@ -276,4 +275,3 @@ def delete_secret(namespace,secret):
     else:
         flash('ERROR WHEN REMOVING SECRET: ' + secret)
         return render_template('select_secret.html', namespace=namespace , namespaces=namespaces, secrets=secrets, titulo='Select secret', error='Secret could not be removed '+secret)
-
