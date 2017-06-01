@@ -19,7 +19,7 @@ We include YAMLs to directly deploy this tool in Kubernetes:
 kubectl create -f k8s-secrets-editor.yml
 ```
 
-( If your kubernetes cluster version < 1.5  )
+( If your kubernetes cluster version < 1.6  )
 ```
 kubectl create -f pre16-k8s-secrets-editor.yml
 ```
