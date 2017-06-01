@@ -16,11 +16,19 @@ We offer two options:
 We include YAMLs to directly deploy this tool in Kubernetes:
 
 ```
-kubectl create -f k8s-deployment.yaml
-kubectl create -f k8s-svc.yaml
+kubectl create -f k8s-secrets-editor.yml
 ```
 
-And enjoy it at http://SERVICE_IP_ADDRESS
+( If your kubernetes cluster version < 1.5  )
+```
+kubectl create -f pre16-k8s-secrets-editor.yml
+```
+
+And enjoy it at http://SERVICE_IP_ADDRESS or mapping the port to your local
+
+```
+kubectl --namespace kube-system port-forward <POD_NAME> 8080:80
+```
 
 ### Just pull the image
 
